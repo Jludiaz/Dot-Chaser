@@ -1,12 +1,10 @@
-import java.util.*;
-
 public class TypeA extends Thing {
     
-    public TypeA(){
-
+    public TypeA(int row, int col, char c){
+        super(row, col, c);
     }
 
-    public maybeTurn(){
+    public void maybeTurn(){
         int i = rand.nextInt(3);
 
         if (i == 1) {

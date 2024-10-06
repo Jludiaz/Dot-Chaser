@@ -1,13 +1,13 @@
 import java.util.*;
 
-public class Thing {      
+public abstract class Thing {      
     public static Random rand = new Random(System.currentTimeMillis());
 
     // dir: 0=North, 1=East, 2=South, 3=West.
     // timeSinceLast: this is only important for "TypeB" Things.
     public int  row, col, dir, timeSinceLast;
     public char lab = 'r';
-    public boolean isTypeB;
+
     public Thing(int row, int col, char lab){
         this.row = row;
         this.col = col;
@@ -22,28 +22,17 @@ public class Thing {
         dir = (dir + 3) % 4;
     }
     
-    public void maybeTurn(Thing t) {
-        int i = rand.nextInt(3);
-    
-        if (t.isTypeB) {
-            t.timeSinceLast++;
-        
-            if (t.timeSinceLast == 10) {
-                t.timeSinceLast = 0;
-            }
-        } else   {
-        }
-    }
+    //abstract class so Type classes use and change it
+    public abstract void maybeTurn();
       
-    public void step(Thing t) {
+    public void step() {
         final int[] dc = {
             0, 1, 0, -1
         }, dr = {
             1, 0, -1, 0
         };
-        t.row += dr[t.dir];
-        t.col += dc[t.dir];
+        row += dr[dir];
+        col += dc[dir];
     }
-
 
 }

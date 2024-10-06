@@ -4,10 +4,6 @@ public class ThingList {
 
     ArrayList<Thing>listThings = new ArrayList<>();
     private Thing thing;
-
-    public ThingList(Thing t){
-        thing = t;
-    }
     
     public void addThing(Thing t){
         listThings.add(t);
@@ -29,6 +25,13 @@ public class ThingList {
 
     public String toString(){
         return "Thing: " + thing.row + " " + thing.col + " " + thing.lab;
+    }
+
+    public void moveAll(){
+        for (Thing t : listThings){
+            t.maybeTurn();
+            t.step();
+        }
     }
 
     

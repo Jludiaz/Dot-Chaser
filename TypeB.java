@@ -2,11 +2,11 @@ public class TypeB extends Thing {
 
     private int timeSinceLast = 0;
     
-    public TypeB(){
-        
+    public TypeB(int row, int col, char c){
+        super(row, col, c);
     }
 
-    public maybeTurn(){
+    public void maybeTurn(){
         int i = rand.nextInt(3); 
         timeSinceLast++;
 
