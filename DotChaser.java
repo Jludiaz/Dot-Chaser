@@ -95,7 +95,6 @@ public class DotChaser {
       while( true ) {
         // Every N rounds, add another typeA and typeB Thing.
         if( count % N == 0 ) {
-
           //THING A
           Thing tA = new Thing();
           tA.row = 45;
@@ -103,22 +102,6 @@ public class DotChaser {
 
           ThingList thingListA = new ThingList(tA);
           things.add(thingListA);
-          
-          // Thing nA = new Thing();
-          // nA.data = tA;
-          // nA.next = L;
-          // L       = nA;
-
-          // Add a typeB thing to the list
-          // Thing tB = new Thing();
-          // tB.row     = 55;
-          // tB.col     = 50;
-          // tB.lab     = 'b';
-          // tB.isTypeB = true;
-          // Node nB = new Node();
-          // nB.data = tB;
-          // nB.next = L;
-          // L       = nB;
 
           //THING B
           Thing tB = new Thing();

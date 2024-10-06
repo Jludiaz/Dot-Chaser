@@ -14,12 +14,12 @@ public class Thing {
         this.lab = lab;
     }
 
-    public void rightTurn(Thing t) {
-        t.dir = (t.dir + 1) % 4;
+    public void rightTurn() {
+        dir = (dir + 1) % 4;
     }
       
-    public void leftTurn(Thing t) {
-    t.dir = (t.dir + 3) % 4;
+    public void leftTurn() {
+        dir = (dir + 3) % 4;
     }
     
     public void maybeTurn(Thing t) {
@@ -29,24 +29,9 @@ public class Thing {
             t.timeSinceLast++;
         
             if (t.timeSinceLast == 10) {
-            t.timeSinceLast = 0;
-        
-            if (i == 1) {
-                rightTurn(t);
-            }
-        
-            if (i == 2) {
-                leftTurn(t);
-            }
+                t.timeSinceLast = 0;
             }
         } else   {
-            if (i == 1) {
-            rightTurn(t);
-            }
-        
-            if (i == 2) {
-            leftTurn(t);
-            }
         }
     }
       
