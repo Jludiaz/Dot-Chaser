@@ -1,13 +1,17 @@
+import java.util.*;
+
 public class TypeB extends Thing {
 
+
+    // private int Random = rand.nextInt(3); 
     private int timeSinceLast = 0;
     
     public TypeB(int row, int col, char c){
         super(row, col, c);
     }
 
-    public void maybeTurn(){
-        int i = rand.nextInt(3); 
+    public void maybeTurn(Random r){
+        int i = r.nextInt(3);
         timeSinceLast++;
 
         if (timeSinceLast == 10) {

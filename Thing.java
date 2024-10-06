@@ -1,12 +1,12 @@
 import java.util.*;
-
-public abstract class Thing {      
-    public static Random rand = new Random(System.currentTimeMillis());
+abstract class Thing {      
 
     // dir: 0=North, 1=East, 2=South, 3=West.
     // timeSinceLast: this is only important for "TypeB" Things.
-    public int  row, col, dir, timeSinceLast;
-    public char lab = 'r';
+    protected int  row;
+    protected int  col; 
+    protected int  dir; 
+    protected char lab = 'r';
 
     public Thing(int row, int col, char lab){
         this.row = row;
@@ -14,18 +14,17 @@ public abstract class Thing {
         this.lab = lab;
     }
 
-    public void rightTurn() {
+    public void rightTurn(){
         dir = (dir + 1) % 4;
     }
       
-    public void leftTurn() {
+    public void leftTurn(){
         dir = (dir + 3) % 4;
     }
-    
-    //abstract class so Type classes use and change it
-    public abstract void maybeTurn();
+
+    public abstract void maybeTurn(Random r);
       
-    public void step() {
+    public void step(){
         final int[] dc = {
             0, 1, 0, -1
         }, dr = {
