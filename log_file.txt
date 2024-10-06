@@ -1,0 +1,47 @@
+commit 69d9f6ccb7e7a43ac93c712322e53710deb36e25
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Sun Oct 6 15:26:11 2024 -0400
+
+    Got all test cases to work
+
+commit 3effefdb7cf3d5bf472042c7d3673cc684b983d5
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Sun Oct 6 14:01:32 2024 -0400
+
+    Complered but I had 6 failures
+
+commit d342fad23e9cb954eadcf9e297c36ff50ab3b8a2
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Sun Oct 6 13:45:03 2024 -0400
+
+    Successfully eliminated all if statements and got my printAll() method and moveAll method to work. I made the step() method a void method (i forgot)
+
+commit 21e4646e4de1df2de152a6a820312e3c47e8d50b
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Sun Oct 6 12:30:15 2024 -0400
+
+    Transferred the maybeTurn method to typeB and TypeA classes, it is still not working and idk why. Time to do some research
+
+commit b252380c36f0ae1f8fe22d0bc9e8e0eb8f758795
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Sat Oct 5 22:34:32 2024 -0400
+
+    Tweaked Thing.java so Thing can be initialized withrow col and lab
+
+commit 64340b33192ac7e6b8d4b4690bf454a59958efa8
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Sat Oct 5 19:41:33 2024 -0400
+
+    Created a listsinstead of nodes
+
+commit ab4e72719a04f623d5868835032fe1e5c2c5c39d
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Mon Sep 30 15:10:00 2024 -0400
+
+    Second Commit
+
+commit 009634a5312004b36e7ff0cb25c97cd3078d4774
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Mon Sep 30 14:58:50 2024 -0400
+
+    My first commit
