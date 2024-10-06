@@ -1,5 +1,3 @@
-import java.util.*;
-import java.util.ArrayList;
 
 public class DotChaser {
 // public static Random rand = new Random(System.currentTimeMillis());
