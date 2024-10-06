@@ -31,6 +31,9 @@ public class DotChaser {
           //THING B
           TypeB tB = new TypeB(55,50,'b');
           thingList.addThing(tB);
+
+          TypeC tC = new TypeC(60, 50, 'd');
+          thingList.addThing(tC);
         }
         // Print out each thing.
         // (SEEMS LIKE A NICE PRINTALL() METHOD CALL WOULD WORK HERE)

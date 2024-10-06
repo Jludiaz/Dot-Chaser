@@ -34,4 +34,8 @@ abstract class Thing {
         col += dc[dir];
     }
 
+    public String toString(){
+        return row + " " + col + " " + lab;
+    }
+
 }

@@ -10,13 +10,9 @@ public class ThingList {
         listThings.add(t);
     }
 
-    public String toString(){
-        return "Thing: " + thing.row + " " + thing.col + " " + thing.lab;
-    }
-    
     public void printAll(){
         for (Thing t : listThings) {
-            t.toString();
+            System.out.println(t);
         }
     }
 
