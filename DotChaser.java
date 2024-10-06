@@ -84,63 +84,66 @@ public class DotChaser {
   public static void main(String[] args) {
     int N = 200;
 
-    if( args.length != 0 )
+    if( args.length != 0 ) {
       N = Integer.parseInt(args[0]);
+    }
 
-    // INSTEAD OF A NODE, CREATE SOMETHING MORE USER-FRIENDLY
+      // INSTEAD OF A NODE, CREATE SOMETHING MORE USER-FRIENDLY
       int count = 0;
       ArrayList<ThingList> things = new ArrayList<>();
 
-    while( true ) {
-      // Every N rounds, add another typeA and typeB Thing.
-      if( count % N == 0 ) {
+      while( true ) {
+        // Every N rounds, add another typeA and typeB Thing.
+        if( count % N == 0 ) {
 
-        //THING A
-        Thing tA = new Thing();
-        tA.row = 45;
-        tA.col = 50;
-        ThingList thingListA = new ThingList(tA);
-        things.add(thingListA);
-        
-        // Thing nA = new Thing();
-        // nA.data = tA;
-        // nA.next = L;
-        // L       = nA;
+          //THING A
+          Thing tA = new Thing();
+          tA.row = 45;
+          tA.col = 50;
 
-        // Add a typeB thing to the list
-        // Thing tB = new Thing();
-        // tB.row     = 55;
-        // tB.col     = 50;
-        // tB.lab     = 'b';
-        // tB.isTypeB = true;
-        // Node nB = new Node();
-        // nB.data = tB;
-        // nB.next = L;
-        // L       = nB;
+          ThingList thingListA = new ThingList(tA);
+          things.add(thingListA);
+          
+          // Thing nA = new Thing();
+          // nA.data = tA;
+          // nA.next = L;
+          // L       = nA;
 
-        //THING B
-        Thing tB = new Thing();
-        tB.row = 55;
-        tB.col = 50;
-        tB.lab = 'b';
-        tB.isTypeB = true;
+          // Add a typeB thing to the list
+          // Thing tB = new Thing();
+          // tB.row     = 55;
+          // tB.col     = 50;
+          // tB.lab     = 'b';
+          // tB.isTypeB = true;
+          // Node nB = new Node();
+          // nB.data = tB;
+          // nB.next = L;
+          // L       = nB;
 
-        ThingList thingListB = new ThingList(tB);
-        things.add(thingListB);
+          //THING B
+          Thing tB = new Thing();
+          tB.row = 55;
+          tB.col = 50;
+          tB.lab = 'b';
+          tB.isTypeB = true;
 
-      }
-
+          ThingList thingListB = new ThingList(tB);
+          things.add(thingListB);
+        }
         // Print out each thing.
         // (SEEMS LIKE A NICE PRINTALL() METHOD CALL WOULD WORK HERE)
         // (SEEMS LIKE A toString() METHOD IN THE CLASS WOULD ALSO BE NICE)
-
+        ThingList obj = new ThingList(null);
+        obj.printAll();
+        
         // Move each thing.
         // (SEEMS LIKE A NICE MOVEALL() METHOD CALL WOULD WORK HERE)
+
         for(Thing T = L; T != null; T = T.next) {
           maybeTurn(T.data);
           step(T.data);
         }
         count++;
       }
-    }
+  }
 }

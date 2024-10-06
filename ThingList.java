@@ -7,6 +7,10 @@ public class ThingList {
 
     public ThingList(Thing t){
         thing = t;
+        addThing(t);
+    }
+    
+    public void addThing(Thing t){
         listThings.add(t);
     }
 

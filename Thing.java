@@ -8,6 +8,11 @@ public class Thing {
     public int  row, col, dir, timeSinceLast;
     public char lab = 'r';
     public boolean isTypeB;
+    public Thing(int row, int col, char lab){
+        this.row = row;
+        this.col = col;
+        this.lab = lab;
+    }
 
     public void rightTurn(Thing t) {
         t.dir = (t.dir + 1) % 4;
@@ -55,5 +60,5 @@ public class Thing {
         t.col += dc[t.dir];
     }
 
-    
+
 }
