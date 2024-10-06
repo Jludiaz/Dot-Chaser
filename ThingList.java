@@ -10,22 +10,14 @@ public class ThingList {
         listThings.add(t);
     }
 
-    public Thing getThing(){
-        return thing;
+    public String toString(){
+        return "Thing: " + thing.row + " " + thing.col + " " + thing.lab;
     }
-
-    public void setThing(Thing thing){
-        this.thing = thing;
-    }
-
+    
     public void printAll(){
         for (Thing t : listThings) {
             t.toString();
         }
-    }
-
-    public String toString(){
-        return "Thing: " + thing.row + " " + thing.col + " " + thing.lab;
     }
 
     public void moveAll(Random r){
@@ -34,6 +26,15 @@ public class ThingList {
             t.maybeTurn(r);
             t.step();
         }
+    }
+
+    //getter and setter for private variable thing
+    public Thing getThing(){
+        return thing;
+    }
+
+    public void setThing(Thing thing){
+        this.thing = thing;
     }
 
     //not used but test case asks me to have it in file
